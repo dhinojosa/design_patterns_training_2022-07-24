@@ -14,6 +14,8 @@ public class FunctionalBuilder {
         Function<String, Person> afterApplyingMiddleName = afterApplyingFirstName.apply("Falco");
         Person person = afterApplyingMiddleName.apply("Dolby");
 
+        Person differentThomas = afterApplyingFirstName.apply("roger").apply("Smith");
         System.out.println(person);
+        System.out.println(differentThomas);
     }
 }

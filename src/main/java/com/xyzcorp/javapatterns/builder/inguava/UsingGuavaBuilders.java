@@ -17,6 +17,7 @@ import javax.swing.*;
 public class UsingGuavaBuilders {
 
    public static void main(String[] args) {
-      ImmutableList.builder().add(1).add(3,4,5).add(3).build();
+      ImmutableList.builder()
+                   .add(1).add(3,4,5).add(3).build();
    }
 }

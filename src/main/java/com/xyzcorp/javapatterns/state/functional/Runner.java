@@ -8,12 +8,16 @@ public class Runner {
             new Player("Rafael"));
 
 
+        TennisGame tennisGame1 = tennisGame
+            .nextTurn((sal1, rafael1) -> rafael1)
+            .nextTurn((sal1, rafael1) -> sal1)
+            .nextTurn((sal, rafael) -> rafael)
+            .nextTurn((sal, rafael) -> rafael);
+
+        System.out.println(tennisGame1.score());
+
         TennisGame resultGame =
-            tennisGame
-                .nextTurn((sal1, rafael1) -> rafael1)
-                .nextTurn((sal1, rafael1) -> sal1)
-                .nextTurn((sal, rafael) -> rafael)
-                .nextTurn((sal, rafael) -> rafael)
+            tennisGame1
                 .nextTurn((sal, rafael) -> sal)
                 .nextTurn((sal, rafael) -> rafael) //Game already won, Sal
                 // fifteen, Ray Won

@@ -7,10 +7,13 @@ import java.util.stream.Stream;
 
 public class Runner {
     public static void main(String[] args) {
-        Reviewer carAndBuyer = car -> {
-            if (car.passengerAirBags() && car.driverAirBags())
-                return Optional.of("Car and Buyer");
-            else return Optional.empty();
+        Reviewer carAndBuyer = new Reviewer() {
+            @Override
+            public Optional<String> review(Car car) {
+                if (car.passengerAirBags() && car.driverAirBags())
+                    return Optional.of("Car and Buyer");
+                else return Optional.empty();
+            }
         };
 
         Reviewer carFax = car -> {
@@ -21,7 +24,7 @@ public class Runner {
 
         Reviewer jdPower = car -> {
             if (car.rearCamera() && car.driveLaneAssist() && car.powerSteering())
-                return Optional.of("CarFax");
+                return Optional.of("JD Power");
             else return Optional.empty();
         };
 

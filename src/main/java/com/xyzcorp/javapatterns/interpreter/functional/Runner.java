@@ -7,11 +7,12 @@ public class Runner {
     }
 
     private static int evaluate(Expression expression) {
-        return switch(expression) {
-            case Constant c -> c.number();
-            case Sum    s -> evaluate(s.left()) + evaluate(s.right());
-            case Subtract s -> evaluate(s.left()) - evaluate(s.right());
-            case Multiply s -> evaluate(s.left()) * evaluate(s.right());
-        };
+//        return switch(expression) {
+////            case Constant c -> c.number();
+////            case Sum    s -> evaluate(s.left()) + evaluate(s.right());
+////            case Subtract s -> evaluate(s.left()) - evaluate(s.right());
+////            case Multiply s -> evaluate(s.left()) * evaluate(s.right());
+//        };
+        return 0;
     }
 }
